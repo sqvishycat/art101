@@ -17,6 +17,26 @@
   .special {
     background-color: rgb(0, 255, 200);
     border: dotted 50px rgb(128, 0, 255);
-    color: rgb(0, 255, 55);
+    color: rgb(255, 0, 191);
     font-weight: bolder;
+}
+
+.awesome {
+  background-color: rgb(255, 77, 0);
+  border: dotted 50px rgb(38, 0, 255);
+  color: rgb(0, 255, 204);
+  font-weight: bolder;
+}
+
+.cool{
+  background-color: rgb(255, 255, 0);
+  border: dotted 50px rgb(128, 0, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+.amazing {
+  background-color: rgb(0, 255, 200);
+  border: dotted 50px rgb(251, 255, 0);
+  color: rgb(255, 13, 0);
+  font-weight: bolder;
 }
