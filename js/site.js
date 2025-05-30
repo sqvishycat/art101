@@ -1,16 +1,21 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// Leon Linke <llinke@ucsc.edu>
+// Nate Arnold <naarnold@ucsc.edu>
+// May 29 2025
 
-// Constants
+
 
 // Functions
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
+// Button for fun surprise 
+function theButton() {
+    var gif = document.getElementById("funnygif");
+    if (gif.style.display === "block") {
+      gif.style.display = "none";
+    } else {
+      gif.style.display = "block";
+    }
 }
+
 
 function main() {
   console.log("Main function started.");

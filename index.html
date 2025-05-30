@@ -14,7 +14,8 @@
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
-
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="site.js" DEFER></script>
 	<!-- <script type="text/javascript" src="./js/lab.js" DEFER></script> -->
 </head>
 <body>
@@ -25,16 +26,22 @@
 			<div class="minor-section">
 					<!-- Note that all filenames use lowercase and no spaces -->
 					<!--<img class="cat-gif" src="https://media1.tenor.com/m/isKicl09XcAAAAAd/laughingcat-cat-laughing-meme.gif"> -->
-					<img class="leon-n-curly" src="img/leon-n-curly.jpg">
+					<img class="our-image" src="img/leon-n-curly.jpg">
+					<img class="our-image" src="img/natethegr8.jpg">
 					<h2>About Us</h2>
 					<p>I am Leon! And this is Curly my super cute cat. I major in Art & Design: Games + Playable Media. 
 						I am an epic gamer and I LOOOOOOOOOOOVE Resident Evil. </p>
 			
-					<p>Hi Im Nate.</p>
-			
-					<audio controls autoplay>
-					<source src="" type="audio/ogg">
-					<source src="Friday Theme.mp3" type="audio/mpeg">
+					<p>Hi Im Nate. Im a Network and Digital Technology major.</p>
+					
+					<!-- Button and hidden image -->
+				<button onclick="toggleImage()">Click Me!</button>
+				<br><br>
+				<img id="hidden-pic" src="img/cat-tickle-cat.gif" style="display:none; max-width: 100%;" alt="Surprise!">
+
+
+					<audio autoplay loop>
+					<source src="audio/fridaytheme.wav" type="audio/wav">
 					Your browser does not support the audio element.
 					</audio>
 					</div>
@@ -58,5 +65,12 @@
 			</ul>
 		</nav>
 	</main>
+	<script>
+		function toggleImage() {
+			const img = document.getElementById("hidden-pic");
+			img.style.display = (img.style.display === "none") ? "block" : "none";
+		}
+	</script>
+
 </body>
 </html>
