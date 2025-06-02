@@ -1,24 +1,35 @@
-// Leon Linke <llinke@ucsc.edu>
-// Nate Arnold <naarnold@ucsc.edu>
-// June 2 2025
-
 $(document).ready(function () {
-  // Append the button
-  $("#output").append("<button id='button-output'>Get a Fortune</button>");
+  // Add the button
+  $("#output").append("<button id='button-output'>Get Random Pokémon</button>");
 
-  // Add click listener
+  // Add a container to hold the Pokémon result
+  $("#output").append("<div id='pokemon-container'></div>");
+
+  // Button click handler
   $("#button-output").click(function () {
+    let randomId = Math.floor(Math.random() * 898) + 1; // Valid Pokémon IDs
+
+    // Clear previous Pokémon
+    $("#pokemon-container").empty();
+
     $.ajax({
-      url: "http://yerkee.com/api/fortune/all", 
+      url: `https://pokeapi.co/api/v2/pokemon/${randomId}`,
       type: "GET",
       dataType: "json",
       success: function (data) {
-        console.log(data);
-        $("#output").append("<p>" + data.fortune + "</p>");
+        let name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
+        let sprite = data.sprites.front_default;
+
+        // Display Pokémon info
+        $("#pokemon-container").append(`
+          <div class="pokemon-card">
+            <h3>${name}</h3>
+            <img src="${sprite}" alt="${name}" />
+          </div>
+        `);
       },
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.log("Error:", textStatus, errorThrown);
-        $("#output").append("<p>Could not fetch wisdom. Try again later.</p>");
+      error: function () {
+        $("#pokemon-container").append("<p>Couldn't fetch a Pokémon. Try again!</p>");
       }
     });
   });
