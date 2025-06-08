@@ -1,0 +1,50 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+
+.pokemon-card {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f8f8ff;
+  width: 150px;
+}
+
+.pokemon-card img {
+  width: 96px;
+  height: 96px;
+}
+.minor-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
+    max-height: 100px;
+  }
+
+  
+.text p {
+  display: inline-block;
+  max-width: 60%;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: crimson;
+  color: white;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+  font-size: 0.8em;
+  max-height: 100px;
+}
+
+#output {
+  column-count: 4;     /* or however many columns you want */
+  column-gap: 20px;    /* space between columns */
+}
+
+.gifs {
+  width: auto;          /* scale to parent container */     /* limit how big they get */
+  height: auto;
+}

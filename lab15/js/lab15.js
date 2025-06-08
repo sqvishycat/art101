@@ -1,3 +1,9 @@
+// Task 2: Create a JavaScript file
+// Leon Linke <llinke@ucsc.edu>
+// Nate Arnold <naarnold@ucsc.edu>
+// Jun 2 2025
+
+
 $(document).ready(function () {
   // Add the button
   $("#output").append("<button id='button-output'>Get Random Pokémon</button>");
